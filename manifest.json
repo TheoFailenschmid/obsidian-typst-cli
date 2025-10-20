@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-typst-cli",
+	"name": "Typst CLI Math Integration",
+	"version": "1.3.0",
+	"minAppVersion": "0.15.0",
+	"description": "Replaces default math blocks with Typst-rendered math blocks using the Typst CLI",
+	"author": "Your Name",
+	"authorUrl": "https://yourwebsite.com",
+	"isDesktopOnly": true
+}

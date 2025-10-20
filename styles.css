@@ -1,0 +1,121 @@
+/* Styles for Typst Math Renderer Plugin */
+
+.typst-math-container {
+	margin: 1em 0;
+	padding: 0.5em;
+	background-color: var(--background-primary);
+	border-radius: 4px;
+	color: #deb4ae;
+}
+
+.typst-math-inline {
+	display: inline-block;
+	margin: 0;
+	padding: 0 0.2em;
+	color: #deb4ae;
+}
+
+.typst-loading {
+	color: var(--text-muted);
+	font-style: italic;
+	text-align: center;
+	padding: 1em;
+}
+
+.typst-error {
+	color: #e74c3c;
+	background-color: transparent;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-family: var(--font-interface);
+	font-size: 0.95em;
+	font-weight: 500;
+	white-space: normal;
+	word-break: break-word;
+}
+
+.typst-error-inline {
+	display: inline;
+	color: #e74c3c;
+	font-size: 0.9em;
+}
+
+.typst-error-details {
+	display: block;
+	margin-top: 0.3em;
+	padding: 0.5em;
+	background-color: rgba(231, 76, 60, 0.1);
+	border-radius: 3px;
+	font-family: var(--font-monospace);
+	font-size: 0.85em;
+	color: var(--text-muted);
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* Style the Typst output - inherit theme colors */
+.typst-math-container svg,
+.typst-math-inline svg,
+.typst-math-container .typst-doc,
+.typst-math-inline .typst-doc {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	color: var(--text-normal);
+}
+
+.typst-math-inline svg,
+.typst-math-inline .typst-doc {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Override Typst's default black text in SVG */
+.typst-math-container svg *[fill="#000000"],
+.typst-math-inline svg *[fill="#000000"],
+.typst-math-container svg *[fill="black"],
+.typst-math-inline svg *[fill="black"] {
+	fill: #deb4ae !important;
+}
+
+.typst-math-container svg *[stroke="#000000"],
+.typst-math-inline svg *[stroke="#000000"],
+.typst-math-container svg *[stroke="black"],
+.typst-math-inline svg *[stroke="black"] {
+	stroke: #deb4ae !important;
+}
+
+/* Also target when SVGs are directly in code blocks */
+.markdown-preview-view .cm-preview-code-block svg *[fill="#000000"],
+.markdown-preview-view .cm-preview-code-block svg *[fill="black"] {
+	fill: #deb4ae !important;
+}
+
+.markdown-preview-view .cm-preview-code-block svg *[stroke="#000000"],
+.markdown-preview-view .cm-preview-code-block svg *[stroke="black"] {
+	stroke: #deb4ae !important;
+}
+
+/* Ensure the typst-doc class gets color */
+.typst-doc {
+	color: #deb4ae;
+}
+
+/* Override any remaining color specifications */
+.typst-math-container *,
+.typst-math-inline * {
+	color: inherit;
+}
+
+/* Center block math */
+.typst-math-container p {
+	text-align: center;
+	margin: 0;
+	color: inherit;
+}
+
+/* Ensure proper spacing for math content */
+.typst-math-container > * {
+	margin: 0;
+}
