@@ -1,3 +1,8 @@
+> [!WARNING] Archived
+> This project was here for the time that there was no better support for Typst inside Obisidian. As it uses the Typst CLI to render, it is highly inefficient.
+> It has now been replaced with https://github.com/azyarashi/obsidian-typst-mate
+
+
 # Obsidian Typst Math Renderer
 
 An Obsidian plugin that replaces default math blocks with Typst-rendered math blocks using the Typst CLI.
